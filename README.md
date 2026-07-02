@@ -22,6 +22,24 @@ exercise judgment on factors that are rarely disclosed explicitly. This process
 is time-consuming, difficult to standardize across analysts, and prone to 
 inconsistency — all of which make it a strong candidate for AI-assisted automation.
 
+
+## 📊 Result
+The final output from the AI agent pipeline is an Excel spreadsheet (see screenshot below). The spreadsheet contains:
+
+1. The final CSRP value proposed by the AI agent
+2. Scores for each of the components, and corresponding weights selected by the user
+3. A detailed section for how each of the component scores were determined, along with rationale and citations pulled from the source material
+
+![output](img/screenshot.png)
+
+## 🎬 Operation
+In order to operate the pipeline, run the python script **launch_csrp.py** as shown below:
+
+![operation](img/operation.png)
+
+
+## 🌊 Methodology 
+
 The LLM assesses CSRP against a rubric-style risk taxonomy, scoring each signal 
 on a 1–5 scale relative to industry peers and aggregating scores into a final 
 basis-point premium. At a high level, the agentic pipeline:
@@ -55,25 +73,3 @@ is that rubric-based document assessment — whether evaluating a NeurIPS submis
 or a corporate filing — shares the same fundamental structure: a document corpus, 
 a defined evaluation rubric, and a requirement that every scored judgment be 
 traceable to specific evidence in the source material.
-
-
-## 📊 Result
-The final output from the AI agent pipeline is an Excel spreadsheet (see screenshot below). The spreadsheet contains:
-
-1. The final CSRP value proposed by the AI agent
-2. Scores for each of the components, and corresponding weights selected by the user
-3. A detailed section for how each of the component scores were determined, along with rationale and citations pulled from the source material
-
-![output](img/screenshot.png)
-
-## 🎬 Operation
-In order to operate the pipeline, run the python script **launch_csrp.py** as shown below:
-
-![operation](img/operation.png)
-
-
-## 🌊 Motivation
-The original motivation for this project was the [AI Scientist](https://github.com/SakanaAI/AI-Scientist) agentic pipeline developed by Sakana AI. 
-
-
-## Methodology 
