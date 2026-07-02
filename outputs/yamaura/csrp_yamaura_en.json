@@ -1,0 +1,1048 @@
+{
+  "metadata": {
+    "company": "yamaura",
+    "filing_date": "N/A",
+    "run_date": "2026-06-06",
+    "model": "claude-sonnet-4-6",
+    "comparables_mode": false
+  },
+  "signals": {
+    "REV_01": {
+      "name": "Customer concentration",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_03": {
+      "name": "Contract duration and renewal risk",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_04": {
+      "name": "Change-of-control clauses",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_05": {
+      "name": "Geographic revenue concentration",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_06": {
+      "name": "Revenue volatility",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "need ≥3 years of revenue history",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_02": {
+      "name": "Revenue type mix",
+      "score": 4,
+      "value": "工事契約（進捗度認識）売上高：前期23,255,435千円、当期32,048,304千円",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "Revenue is entirely project-based with no recurring or subscription component, creating lumpiness and revenue visibility risk typical of construction contractors but at the higher end of the risk spectrum.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "３事業等のリスク",
+        "passage": "進捗度に応じた工事契約の売上高\n23,255,435\n32,048,304",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "REV_07": {
+      "name": "End-market cyclicality",
+      "score": 4,
+      "value": "建設事業・開発事業（建築工事、土木工事、エンジニアリング工事、不動産販売）",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "Primary exposure to construction and real estate development markets, which are cyclically sensitive, with no noted diversification into counter-cyclical or stable public-works-dominant segments.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "３事業等のリスク",
+        "passage": "想定を上回る建設需要の減少や主要資材の価格等の急激な上昇、不動産市場における需給状況や価格の大幅な変動等、建設事業・開発事業等に係る著しい環境変化が生じた場合には、業績に影響を及ぼす可能性があります。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MGMT_03": {
+      "name": "Succession planning",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_06": {
+      "name": "Non-compete and retention agreements",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_01": {
+      "name": "Founder / key person concentration",
+      "score": 4,
+      "value": "代表取締役社長 山浦正貴 所有株式数100千株",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "The president's surname matches the company name suggesting founder-family lineage and key-person dependency, and he holds the largest individual share block, though no ownership percentage is disclosed to confirm control concentration.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "(2)役員の状況",
+        "passage": "代表取締役\n社長\n山 浦 正 貴\n1971年５月28日生\n2000年11月\n当社入社\n2005年５月\n当社佐久支店長",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MGMT_02": {
+      "name": "Management team depth and tenure",
+      "score": 3,
+      "value": "取締役10名（監査等委員含む）、最長在籍は1977年入社の藤木公明氏",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "A 10-member board with no recent C-suite departures indicates stability, but the longest-serving executive's ~47-year tenure raises mild entrenchment and succession planning concerns consistent with peer-average risk.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "(2)役員の状況",
+        "passage": "男性10名　女性1名　（役員のうち女性の比率9.1％）",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MGMT_04": {
+      "name": "Insider ownership concentration",
+      "score": 2,
+      "value": "上位5名合計178千株（山浦正貴100、赤羽一成17、保科茂雄15、藤木公明8）",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "Total director shareholdings of 178,000 shares with no individual exceeding a 10% threshold indicates a relatively dispersed insider ownership structure, representing below-average concentration risk.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "(2)役員の状況",
+        "passage": "計\n178",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MGMT_05": {
+      "name": "Related-party transactions",
+      "score": 4,
+      "value": "山浦正貴氏がヤマウラ企画開発㈱代表取締役社長を兼任",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "The president's concurrent role as representative director of a subsidiary creates a structural conflict of interest, and the absence of disclosed transaction volumes or arm's-length terms represents a meaningful transparency gap above peer norms.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "(2)役員の状況",
+        "passage": "2022年６月\nヤマウラ企画開発㈱代表取締役社\n長(現任)",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "FIN_01": {
+      "name": "Leverage ratio trend",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "missing debt/cash/EBITDA inputs",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_02": {
+      "name": "Interest coverage",
+      "score": 2,
+      "value": 261.55,
+      "flag": false,
+      "scored_by": "threshold",
+      "rationale": "EBITDA/Interest ≈ 261.55x (threshold 3.0x).",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "yamaura.pdf",
+        "inputs": [
+          {
+            "line_item": "operating_income",
+            "value": 3891550,
+            "section": "②連結損益計算書及び連結包括利益計算書",
+            "passage": "営業利益　4,327,974　3,891,550"
+          },
+          {
+            "line_item": "depreciation",
+            "value": 332783,
+            "section": "④連結キャッシュ・フロー計算書",
+            "passage": "減価償却費　380,389　332,783"
+          },
+          {
+            "line_item": "interest_expense",
+            "value": 16151,
+            "section": "②連結損益計算書及び連結包括利益計算書",
+            "passage": "支払利息　10,055　16,151"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "FIN_04": {
+      "name": "Financial covenant headroom",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_09": {
+      "name": "Contingent consideration from prior acquisitions",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_03": {
+      "name": "Debt maturity schedule",
+      "score": 1,
+      "value": "該当事項はありません（長期借入金・リース債務等の返済予定額なし）",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "No long-term borrowings, lease obligations, or other interest-bearing liabilities exist for either period, indicating a debt-free balance sheet with zero refinancing risk.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "注記事項",
+        "passage": "（注３) 長期借入金、リース債務及びその他の有利子負債の連結決算日後の返済予定額\n前連結会計年度(2024年３月31日)\n該当事項はありません。\n\n当連結会計年度(2025年３月31日)\n該当事項はありません。",
+        "passage_verified": false
+      },
+      "status": "scored"
+    },
+    "FIN_05": {
+      "name": "Liquidity position",
+      "score": 1,
+      "value": "現金及び現金同等物 12,150,760千円（当期末）、借入金なし",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "Cash and equivalents of approximately 12.15 billion yen with no disclosed borrowings represents an exceptionally strong net-cash position well above typical construction-sector peers.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "注記事項",
+        "passage": "現金及び預金勘定\n12,240,900千円\n預入期間が３ヶ月を超える定期預金\n△90,139千円\n現金及び現金同等物\n12,150,760千円",
+        "passage_verified": false
+      },
+      "status": "scored"
+    },
+    "FIN_06": {
+      "name": "Working capital quality",
+      "score": 3,
+      "value": {
+        "DSO": 69.2,
+        "DIO": 55.2,
+        "DPO": 31.1
+      },
+      "flag": null,
+      "scored_by": "llm",
+      "rationale": "Working-capital days were computed from balance sheet and income statement data, but no specific figures or notable deviations from sector norms are cited, warranting a neutral peer-average score.",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "yamaura.pdf",
+        "inputs": [
+          {
+            "line_item": "accounts_receivable",
+            "value": 6753947,
+            "section": "①連結貸借対照表",
+            "passage": "受取手形・完成工事未収入金等及び契約資産　※1  6,435,154　※1  6,753,947"
+          },
+          {
+            "line_item": "inventory",
+            "value": 4316274,
+            "section": "①連結貸借対照表",
+            "passage": "販売用不動産　1,231,077　2,108,746　未成工事支出金　1,362,068　1,555,465　開発事業等支出金　939,634　611,084　材料貯蔵品　37,412　40,979"
+          },
+          {
+            "line_item": "accounts_payable",
+            "value": 2431106,
+            "section": "①連結貸借対照表",
+            "passage": "工事未払金等　4,264,343　2,431,106"
+          },
+          {
+            "line_item": "revenue",
+            "value": 35613772,
+            "section": "②連結損益計算書及び連結包括利益計算書",
+            "passage": "売上高合計　※1  37,546,595　※1  35,613,772"
+          },
+          {
+            "line_item": "cogs",
+            "value": 28535095,
+            "section": "②連結損益計算書及び連結包括利益計算書",
+            "passage": "売上原価合計　29,972,817　28,535,095"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "FIN_07": {
+      "name": "Off-balance-sheet liabilities",
+      "score": 4,
+      "value": "新リース会計基準（企業会計基準第34号）を2028年3月期より適用予定、影響額評価中",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "The pending new lease accounting standard (effective FY2028) will require all lessee leases on-balance-sheet, and the financial impact remains unquantified, creating above-average uncertainty relative to peers who have already assessed or disclosed their exposure.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "注記事項",
+        "passage": "国際的な会計基準と同様に、借手のすべてのリースについて資産・負債を計上する等の取扱いを定めるものであります。\n\n２.適用予定日\n2028年３月期の期首より適用予定であります。\n\n３.当該会計基準等の適用による影響\n影響額は、当連結財務諸表の作成時において評価中であります。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "FIN_08": {
+      "name": "Pension and OPEB underfunding",
+      "score": 2,
+      "value": "退職給付に係る資産 64,228千円（当期）、退職給付に係る負債 0円（当期、前期は38,448千円）",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "The defined benefit plan shifted from a net liability of 38,448 thousand yen to a net asset of 64,228 thousand yen, indicating the plan is now in surplus and poses below-average pension risk.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "①連結貸借対照表",
+        "passage": "退職給付に係る資産\n－\n64,228\n\n退職給付に係る負債\n38,448\n－",
+        "passage_verified": false
+      },
+      "status": "scored"
+    },
+    "EQ_02": {
+      "name": "Non-GAAP divergence",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_03": {
+      "name": "Auditor quality and changes",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_04": {
+      "name": "Audit opinion quality",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_05": {
+      "name": "Restatement history",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_06": {
+      "name": "Internal control weaknesses",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_08": {
+      "name": "Channel stuffing indicators",
+      "score": 2,
+      "value": "DSO +11%, revenue -5% YoY (2yr approx.)",
+      "flag": false,
+      "scored_by": "threshold",
+      "rationale": "DSO moved +11% vs revenue -5% year-over-year (3yr trend not available from a single filing).",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "yamaura.pdf",
+        "inputs": [
+          {
+            "line_item": "accounts_receivable",
+            "value": 6753947,
+            "section": "①連結貸借対照表",
+            "passage": "受取手形・完成工事未収入金等及び契約資産　※1  6,435,154　※1  6,753,947"
+          },
+          {
+            "line_item": "revenue",
+            "value": 35613772,
+            "section": "②連結損益計算書及び連結包括利益計算書",
+            "passage": "売上高合計　※1  37,546,595　※1  35,613,772"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "EQ_01": {
+      "name": "Revenue recognition policy",
+      "score": 3,
+      "value": "工事契約：インプット法による進捗度に応じた一定期間収益認識；商品販売：引渡時点認識",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "Cost-to-cost revenue recognition for construction contracts and point-of-delivery for real estate sales are both standard industry practices, presenting no unusual accounting risk relative to sector peers, though inherent estimation uncertainty in long-term contracts is a normal sector characteristic.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "注記事項",
+        "passage": "工事契約に係る収益には主に建築工事、土木工事、エンジニアリング工事が含まれ、当該契約に含まれる工事についての履行義務を充足するにつれて、一定の期間にわたり工事契約に基づき収益を認識しております。履行義務の充足に係る進捗度の見積りの方法は、見積総原価に対する発生原価の割合（インプット法）で算出しており",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "EQ_07": {
+      "name": "Expense capitalization policy",
+      "score": 2,
+      "value": "自社利用ソフトウェア：社内利用可能期間5年の定額法；研究開発費は費用処理（前期12,795千円、当期51,538千円）",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "Internal-use software is capitalized conservatively over 5 years straight-line, and R&D costs are fully expensed as incurred rather than capitalized, representing a conservative stance that reduces earnings quality risk below the sector-average level despite the large year-on-year increase in R&D expenditure.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "注記事項",
+        "passage": "自社利用のソフトウェアについては、社内における利用可能期間（５年）に基づく定額法を採用しております。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "OPS_02": {
+      "name": "Supplier concentration",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_07": {
+      "name": "IP ownership and protection",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_01": {
+      "name": "Product/service concentration",
+      "score": 4,
+      "value": "建設事業 28,636,728千円 / 連結売上高 35,613,772千円（約80.4%）",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "Construction segment represents ~80% of consolidated revenue with the secondary Development segment declining 33% YoY, indicating high single-segment concentration and a weakening diversification buffer.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "セグメント情報",
+        "passage": "外部顧客に対する売上高\n28,636,728\n4,005,160\n2,971,884\n35,613,772\n－\n35,613,772",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "OPS_03": {
+      "name": "Capital expenditure intensity and asset age",
+      "score": 3,
+      "value": "Capex/Revenue ≈ 1.3%",
+      "flag": null,
+      "scored_by": "llm",
+      "rationale": "Capex intensity is referenced from the cash-flow statement but no specific figures are cited in the evidence, making it impossible to assess deviation from sector norms; scored at peer average.",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "yamaura.pdf",
+        "inputs": [
+          {
+            "line_item": "capex",
+            "value": 447993,
+            "section": "④連結キャッシュ・フロー計算書",
+            "passage": "有形固定資産の取得による支出　△630,985　△447,993"
+          },
+          {
+            "line_item": "revenue",
+            "value": 35613772,
+            "section": "②連結損益計算書及び連結包括利益計算書",
+            "passage": "売上高合計　※1  37,546,595　※1  35,613,772"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "OPS_04": {
+      "name": "Operating leverage",
+      "score": 3,
+      "value": "全社費用（固定費）当連結会計年度 △1,371,699千円；従業員給料手当 799,783千円、賞与引当金繰入額 271,905千円",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "Fixed cost items are partially disclosed (corporate expenses and salaries) but no fixed/variable split or margin sensitivity is provided, leaving operating leverage assessment at sector-average uncertainty.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "セグメント情報",
+        "passage": "各報告セグメントに配分していない全社費用△1,371,699千円が含まれております。全社費用は主に報告セグメントに帰属しない一般管理費であります。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "OPS_05": {
+      "name": "Backlog and forward visibility",
+      "score": 3,
+      "value": "進捗度に応じた工事契約の売上高 32,048,304千円；契約資産 4,670,397千円（当連結会計年度）",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "Contract assets nearly doubled YoY, providing improved near-term revenue visibility, but the absence of an explicit order backlog or book-to-bill ratio limits forward visibility to below best practice, netting to peer average.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "④連結キャッシュ・フロー計算書",
+        "passage": "進捗度に応じた工事契約の売上高\n23,255,435\n32,048,304\n契約資産\n3,005,210\n4,670,397",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "OPS_06": {
+      "name": "Technology obsolescence risk",
+      "score": 2,
+      "value": "建設DXのアーリーアダプターとして、BIMをはじめ３Dレーザースキャナーでの現場環境のデジタル化等IoT技術を駆使",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "The company is described as an early adopter of construction DX (BIM, 3D laser scanning), positioning it ahead of typical sector peers on technology transition risk.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "３事業の内容",
+        "passage": "建設DXのアーリーアダプターとして、BIMをはじめ３Dレーザースキャナーでの現場環境のデジタル化等IoT技術を駆使して",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "OPS_08": {
+      "name": "Labor and union risk",
+      "score": 4,
+      "value": "担い手不足リスク：建設技術者・技能労働者が減少傾向、高齢化と労働者のさらなる減少が進むと工期の遅れや人件費の上昇を招く可能性",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "The filing explicitly flags labor shortage and an aging/declining construction workforce as a risk that could delay projects and raise costs, with no disclosed mitigation measures such as union agreements or workforce development programs.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "３事業等のリスク",
+        "passage": "建設業界においては、建設技術者・技能労働者が減少傾向であり、高齢化と労働者のさらなる減少が進むと、工期の遅れや人件費の上昇を招き、業績等に影響を及ぼす可能性があります。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "LEG_01": {
+      "name": "Pending litigation",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_02": {
+      "name": "Regulatory investigations",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_03": {
+      "name": "Environmental liabilities",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_04": {
+      "name": "Industry-specific regulatory dependencies",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_06": {
+      "name": "Cybersecurity and data privacy risk",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_05": {
+      "name": "Tax contingencies",
+      "score": 4,
+      "value": "評価性引当金 △1,362,691千円（当連結会計年度）",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "A near-total valuation allowance of ¥1,362,691 thousand against deferred tax assets — almost entirely attributable to allowance for doubtful accounts — signals above-average uncertainty in receivables collectibility and deferred tax asset recoverability relative to sector peers.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "注記事項",
+        "passage": "評価性引当金\n△1,019,730千円\n△1,362,691千円\n繰延税金資産合計\n564,997千円\n588,916千円",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MKT_01": {
+      "name": "Market share trend",
+      "score": 4,
+      "value": "売上高356億13百万円、前年同期比19億32百万円(5.1％)の減収",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "A 21.6% YoY drop in order intake alongside a 5.1% revenue decline signals meaningful market share pressure and a deteriorating competitive position relative to sector peers.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "４経営者による財政状態、経営成績及びキャッシュ・フローの状況の分析",
+        "passage": "受注高（開発事業等含む）375億31百万円、前年同期比103億28百万円(21.6％)の減少、売上高356億13百万円、前年同期比19億32百万円(5.1％)の減収",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MKT_02": {
+      "name": "Competitive intensity",
+      "score": 4,
+      "value": "受注競争の激化、価格競争が依然として激しい",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "Management explicitly acknowledges intensifying competition from both shrinking large public projects and persistent price competition in private investment, indicating above-average competitive pressure.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "４経営者による財政状態、経営成績及びキャッシュ・フローの状況の分析",
+        "passage": "民間設備投資についても、慎重な姿勢・価格競争が依然として激しい状況で推移しております。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MKT_03": {
+      "name": "Barriers to entry",
+      "score": 2,
+      "value": "独自商品・技術（リフレッシュ工法、BIM、CIM、ブレインマンション等）、国土交通省建設コンサルタント登録",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "Proprietary methods, ICT/BIM capabilities, and regulatory registration as a construction consultant provide genuine, if modest, differentiation that reduces entry risk below the sector average.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "３事業の内容",
+        "passage": "リフレッシュ工法(劣化コンクリート構造物の補修工法)等の独自商品による提案型営業により客先の開拓に努めております。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MKT_04": {
+      "name": "Pricing power and gross margin trend",
+      "score": 3,
+      "value": "gross margin 20.2% → 19.9% (-0.3 pts)",
+      "flag": null,
+      "scored_by": "llm",
+      "rationale": "No gross margin data is provided in the evidence, so the score defaults to the peer-average anchor with no basis to deviate.",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "yamaura.pdf",
+        "inputs": [
+          {
+            "line_item": "revenue",
+            "value": 35613772,
+            "section": "②連結損益計算書及び連結包括利益計算書",
+            "passage": "売上高合計　※1  37,546,595　※1  35,613,772"
+          },
+          {
+            "line_item": "cogs",
+            "value": 28535095,
+            "section": "②連結損益計算書及び連結包括利益計算書",
+            "passage": "売上原価合計　29,972,817　28,535,095"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "MKT_05": {
+      "name": "Commodity and input cost exposure",
+      "score": 3,
+      "value": "主要資材の価格等の急激な上昇、建設資材の価格高騰・納期遅延",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "Material price inflation and delivery delays are cited as risks but are sector-wide phenomena, and the absence of hedging disclosure is typical for mid-sized Japanese contractors, placing this at peer average.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "３事業等のリスク",
+        "passage": "想定を上回る建設需要の減少や主要資材の価格等の急激な上昇、不動産市場における需給状況や価格の大幅な変動等、建設事業・開発事業等に係る著しい環境変化が生じた場合には、業績に影響を及ぼす可能性があります。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MACRO_03": {
+      "name": "Cyclical drawdown history",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MACRO_01": {
+      "name": "FX exposure",
+      "score": 1,
+      "value": "デリバティブは行っておりません",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "No foreign currency revenue or cost exposure is disclosed and no derivatives are used, indicating the company operates almost entirely domestically with minimal FX risk.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "注記事項",
+        "passage": "デリバティブは行っておりません。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MACRO_02": {
+      "name": "Interest rate sensitivity",
+      "score": 2,
+      "value": "割引率 前連結会計年度0.45％、当連結会計年度1.50％",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "No floating rate long-term debt is disclosed, and the rise in pension discount rate (0.45%→1.50%) reduces pension obligations rather than increasing them, suggesting below-average interest rate sensitivity.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "注記事項",
+        "passage": "割引率\n0.45％\n1.50％\n長期期待運用収益率\n1.5％\n1.50％",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "JP_02": {
+      "name": "Main bank dependence",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_05": {
+      "name": "APPI / personal data compliance",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_01": {
+      "name": "Strategic (cross-) shareholdings",
+      "score": 3,
+      "value": "製作保有株式の検証・処分方針の決定",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "A review and disposal policy for strategically held shares exists, but no quantitative disclosure (count, book value, or % of net assets) is provided, leaving actual exposure opaque and consistent with peer-average disclosure practice among Japanese mid-cap companies.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "４コーポレート・ガバナンスの状況等",
+        "passage": "製作保有株式の検証・処分方針の決定、重要な設備投資の審議等があります。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "JP_03": {
+      "name": "Holding company structure",
+      "score": 3,
+      "value": "子会社を含むグループ会社が存在；管理本部が子会社管理担当部署",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "Yamaura operates as a standard Japanese operating parent with subsidiaries managed under formal group management regulations, representing a typical and adequately governed group structure with no unusual complexity or opacity.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "４コーポレート・ガバナンスの状況等",
+        "passage": "子会社を管理する担当部署を管理本部とし、子会社を含む当社グループの業務の適正性の確保と業務執行の効率化を図るために、関係会社管理規程に則り管理する",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "JP_04": {
+      "name": "Board composition and independence",
+      "score": 2,
+      "value": "取締役会10名（社内取締役5名＋監査等委員5名うち社外4名）；指名・報酬委員会設置（独立社外取締役が委員長・過半数）；監査等委員会設置会社",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "With 4 out of 5 audit & supervisory committee directors being independent outside directors and a nomination/compensation committee chaired by an independent director with an independent majority, Yamaura's board governance is above the Japanese mid-cap peer average, indicating below-average governance risk.",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "yamaura.pdf",
+        "section": "４コーポレート・ガバナンスの状況等",
+        "passage": "当社の取締役会は、取締役(監査等委員である取締役を除く。)５名と監査等委員である取締役５名(うち社外取締役４名)の計10名で構成されております。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    }
+  },
+  "category_scores": {
+    "REV": 4.0,
+    "MGMT": 3.25,
+    "FIN": 2.17,
+    "EQ": 2.33,
+    "OPS": 3.17,
+    "LEG": 4.0,
+    "MKT": 3.2,
+    "MACRO": 1.5
+  },
+  "composite_score": 2.98,
+  "csrp_bps_low": 150,
+  "csrp_bps_high": 200,
+  "recommended_bps": 175,
+  "japan_supplemental": {
+    "JPN": {
+      "score": 2.67,
+      "signals": {
+        "JP_01": {
+          "score": 3,
+          "scored_by": "llm",
+          "rationale_en": "A review and disposal policy for strategically held shares exists, but no quantitative disclosure (count, book value, or % of net assets) is provided, leaving actual exposure opaque and consistent with peer-average disclosure practice among Japanese mid-cap companies.",
+          "rationale_ja": "政策保有株式に関する検証・処分方針は存在するが、保有銘柄数・簿価・純資産比率等の定量的開示がなく、実際のエクスポージャーが不透明であり、日本の中堅企業における平均的な開示水準と同程度と判断される。",
+          "value": "製作保有株式の検証・処分方針の決定",
+          "flag": false,
+          "citation": {
+            "citation_type": "nlp",
+            "doc": "yamaura.pdf",
+            "section": "４コーポレート・ガバナンスの状況等",
+            "passage": "製作保有株式の検証・処分方針の決定、重要な設備投資の審議等があります。",
+            "passage_verified": true
+          },
+          "status": "scored"
+        },
+        "JP_02": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "no supporting evidence in selected sections",
+          "rationale_ja": "no supporting evidence in selected sections",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_03": {
+          "score": 3,
+          "scored_by": "llm",
+          "rationale_en": "Yamaura operates as a standard Japanese operating parent with subsidiaries managed under formal group management regulations, representing a typical and adequately governed group structure with no unusual complexity or opacity.",
+          "rationale_ja": "山浦は関係会社管理規程に基づき子会社を管理する標準的な事業持株親会社として機能しており、特段の複雑性や不透明性はなく、同業他社と同水準のグループ構造と評価される。",
+          "value": "子会社を含むグループ会社が存在；管理本部が子会社管理担当部署",
+          "flag": false,
+          "citation": {
+            "citation_type": "nlp",
+            "doc": "yamaura.pdf",
+            "section": "４コーポレート・ガバナンスの状況等",
+            "passage": "子会社を管理する担当部署を管理本部とし、子会社を含む当社グループの業務の適正性の確保と業務執行の効率化を図るために、関係会社管理規程に則り管理する",
+            "passage_verified": true
+          },
+          "status": "scored"
+        },
+        "JP_04": {
+          "score": 2,
+          "scored_by": "llm",
+          "rationale_en": "With 4 out of 5 audit & supervisory committee directors being independent outside directors and a nomination/compensation committee chaired by an independent director with an independent majority, Yamaura's board governance is above the Japanese mid-cap peer average, indicating below-average governance risk.",
+          "rationale_ja": "監査等委員会の社外取締役4名（うち独立役員）および独立社外取締役が委員長を務める指名・報酬委員会の設置により、日本の中堅企業平均を上回るガバナンス水準にあり、リスクは平均以下と判断される。",
+          "value": "取締役会10名（社内取締役5名＋監査等委員5名うち社外4名）；指名・報酬委員会設置（独立社外取締役が委員長・過半数）；監査等委員会設置会社",
+          "flag": false,
+          "citation": {
+            "citation_type": "nlp",
+            "doc": "yamaura.pdf",
+            "section": "４コーポレート・ガバナンスの状況等",
+            "passage": "当社の取締役会は、取締役(監査等委員である取締役を除く。)５名と監査等委員である取締役５名(うち社外取締役４名)の計10名で構成されております。",
+            "passage_verified": true
+          },
+          "status": "scored"
+        },
+        "JP_05": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "no supporting evidence in selected sections",
+          "rationale_ja": "no supporting evidence in selected sections",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        }
+      }
+    }
+  },
+  "unscored_signals": [
+    {
+      "id": "REV_01",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "REV_03",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "REV_04",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "REV_05",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "REV_06",
+      "reason": "need ≥3 years of revenue history"
+    },
+    {
+      "id": "MGMT_03",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "MGMT_06",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "FIN_01",
+      "reason": "missing debt/cash/EBITDA inputs"
+    },
+    {
+      "id": "FIN_04",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "FIN_09",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "EQ_02",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "EQ_03",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "EQ_04",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "EQ_05",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "EQ_06",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "OPS_02",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "OPS_07",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "LEG_01",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "LEG_02",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "LEG_03",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "LEG_04",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "LEG_06",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "MACRO_03",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "JP_02",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "JP_05",
+      "reason": "no supporting evidence in selected sections"
+    }
+  ],
+  "search_calls": []
+}

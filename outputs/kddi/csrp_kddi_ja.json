@@ -1,0 +1,984 @@
+{
+  "metadata": {
+    "company": "KDDI",
+    "filing_date": "N/A",
+    "run_date": "2026-06-10",
+    "model": "claude-sonnet-4-6",
+    "comparables_mode": false
+  },
+  "signals": {
+    "REV_01": {
+      "name": "顧客集中リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_03": {
+      "name": "契約期間・更新リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_04": {
+      "name": "支配権変更条項",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_05": {
+      "name": "地域別売上集中リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_06": {
+      "name": "売上ボラティリティ",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "need ≥3 years of revenue history",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_02": {
+      "name": "収益タイプ構成",
+      "score": 2,
+      "value": "主にモバイル通信サービスにおける月額基本使用料及び通信料収入（定額・従量）が主要収益",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "KDDIの収益は主にサブスクリプション型の携帯通信料金で構成されており、高い予測可能性と安定したキャッシュフローをもたらすため、同業他社と比較して収益変動リスクは低い。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "３事業等のリスク",
+        "passage": "モバイル通信サービス収入及び契約事務等の手数料収入は、お客さまに対して契約に基づいたサービスを提供することによって履行義務が充足されると判断し、サービス提供時点で定額料金及び従量課金に基づき認識しております。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "REV_07": {
+      "name": "最終市場の景気循環性",
+      "score": 2,
+      "value": "移動通信、固定通信、付加価値サービス（電力・金融含む）、ソリューションサービス",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "KDDIのエンドマーケットは、モバイル・固定通信という生活インフラに加え、電力・金融サービスにも分散されており、景気循環の影響を受けにくい収益構造となっているため、景気感応度リスクは平均以下である。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "３事業等のリスク",
+        "passage": "競争激化に伴う料金値下げによる通信料収入の低下、販売コミッションやお客さま維持コストの増大・金融事業における競争において期待通りの収入を上げられるかどうか・燃料高騰等による通信設備コストの増加及びエネルギー事業における電力調達コストの増加",
+        "passage_verified": false
+      },
+      "status": "scored"
+    },
+    "MGMT_01": {
+      "name": "創業者・キーパーソン依存",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_06": {
+      "name": "競業避止・リテンション契約",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_02": {
+      "name": "経営チームの層の厚さと在任期間",
+      "score": 2,
+      "value": "17名の役員（取締役12名、監査役5名）、執行役員制導入で執行役員39名",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "39名の執行役員体制と2003年以来の長期在籍幹部の存在は、経営陣の厚みを示しており、大手日本通信企業の業界平均と比較してキーパーソンリスクは低い水準にある。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "（２）役員の状況",
+        "passage": "男性14名　女性3名（役員のうち女性の比率17.6%）",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MGMT_03": {
+      "name": "後継者計画",
+      "score": 1,
+      "value": "田中孝司が取締役相談役へ、髙橋誠が代表取締役会長へ、松田浩路が代表取締役社長CEOへ移行（2025年4月）",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "高橋氏が会長に移行し、松田氏が2025年4月に社長兼CEOに昇格するという明確な後継者計画は、透明性が高く秩序ある経営移行を示しており、日本企業の一般的な慣行を上回る水準にある。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "（２）役員の状況",
+        "passage": "2025年４月当社代表取締役会長（現在に至る）\n2025年４月当社代表取締役社長CEO（現在に至る）",
+        "passage_verified": false
+      },
+      "status": "scored"
+    },
+    "MGMT_04": {
+      "name": "内部関係者の持株集中",
+      "score": 3,
+      "value": "役員合計所有株式数184,400株（提出日現在）、最大保有者は田中孝司62,500株",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "役員保有株式合計18万4,400株はKDDIの発行済株式総数に対して極めて少なく、大手日本企業に典型的な低いインサイダー持株比率を反映しており、集中リスクも整合性インセンティブも特段見られない。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "（２）役員の状況",
+        "passage": "計\n184,400",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MGMT_05": {
+      "name": "関連当事者取引",
+      "score": 2,
+      "value": "社外取締役関連会社（京セラ、トヨタ自動車、三井化学、田辺総合法律事務所、デンソー）との商取引関係あり、いずれも売上高の1～5%未満",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "社外取締役関連会社（京セラ、トヨタ、デンソー等）との関連当事者取引はいずれも売上高の5%未満であり、明示的に開示されていることから、利益相反リスクは業界平均を下回る適切な管理水準にある。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "（２）役員の状況",
+        "passage": "当社と京セラ株式会社及びトヨタ自動車株式会社の間には商取引関係がありますが、その取引額はいずれも双方から見て売上高の５％未満です。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "FIN_01": {
+      "name": "レバレッジ比率の趨勢",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "missing debt/cash/EBITDA inputs",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_02": {
+      "name": "インタレスト・カバレッジ",
+      "score": 2,
+      "value": 101.85,
+      "flag": false,
+      "scored_by": "threshold",
+      "rationale": "EBITDA/支払利息 ≈ 101.85倍（閾値 3.0倍）。",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "kddi.pdf",
+        "inputs": [
+          {
+            "line_item": "operating_income",
+            "value": 1118674,
+            "section": "②連結損益計算書",
+            "passage": "営業利益 961,584 1,118,674"
+          },
+          {
+            "line_item": "depreciation",
+            "value": 686788,
+            "section": "⑤連結キャッシュ・フロー計算書",
+            "passage": "減価償却費及び償却費 6,7 687,349 686,788"
+          },
+          {
+            "line_item": "interest_expense",
+            "value": 17726,
+            "section": "⑤連結キャッシュ・フロー計算書",
+            "passage": "支払利息 28 8,813 17,726"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "FIN_03": {
+      "name": "負債の返済期限スケジュール",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "missing debt maturity inputs",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_04": {
+      "name": "財務コベナンツの余裕度",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_06": {
+      "name": "運転資本の質",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "missing working-capital inputs",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_09": {
+      "name": "過去の買収に係る条件付対価",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_05": {
+      "name": "流動性ポジション",
+      "score": 2,
+      "value": "現金及び現金同等物：前期887,207百万円、当期921,175百万円",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "現金及び現金同等物は約9,212億円と前年比増加しており、安定したキャッシュフローに裏付けられた十分な流動性バッファーを有しており、同業他社比でリスクは低い。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "①連結財政状態計算書",
+        "passage": "現金及び現金同等物\n14\n887,207  \n921,175",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "FIN_07": {
+      "name": "オフバランス負債",
+      "score": 1,
+      "value": "使用権資産：前期425,173百万円、当期416,862百万円；偶発債務（保証債務等）合計約8,999百万円(当期)",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "オフバランスのエクスポージャーは約90億円にとどまり、総資産規模に対して極めて軽微であり、主要なリース債務はIFRS16に基づきオンバランス計上済みであるため、残存リスクは最小限である。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "①連結財政状態計算書",
+        "passage": "使用権資産\n8,36\n425,173  \n416,862",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "FIN_08": {
+      "name": "退職給付債務の積立不足",
+      "score": 1,
+      "value": "退職給付に係る資産：前期5,096百万円、当期6,179百万円（純資産超過）",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "退職給付に係る資産（純額）が61億79百万円の黒字であり、年金制度は積立超過の状態にあるため、積立不足リスクはなく、同業他社比で良好な水準にある。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "①連結財政状態計算書",
+        "passage": "退職給付に係る資産\n17\n5,096  \n6,179",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "EQ_02": {
+      "name": "非会計基準指標との乖離",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_05": {
+      "name": "過年度修正の履歴",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_06": {
+      "name": "内部統制の不備",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_08": {
+      "name": "押込み販売の兆候",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "need current+prior receivables and revenue",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_01": {
+      "name": "収益認識方針",
+      "score": 2,
+      "value": "Point-in-time for device sales and service delivery; over-time for subscription/content services",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "KDDIの収益認識方針はIFRS第15号に準拠した標準的な通信業界の処理（端末は引渡時、サービスは期間按分、初期費用は繰延）であり、積極的な収益計上や異常な束ね処理は見受けられない。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "注記事項",
+        "passage": "携帯端末収入は、携帯端末の支配が当社から代理店に移転し、履行義務が充足したと考えられる携帯端末の代理店への引き渡し時点で、収益を認識しております。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "EQ_03": {
+      "name": "監査人の質と異動",
+      "score": 2,
+      "value": "PwC Japan有限責任監査法人",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "監査法人はBig4系列のPwCジャパン合同会社であり、監査人の交代も開示されていないため、継続性と信頼性の観点からピア平均を上回る水準にある。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "注記事項",
+        "passage": "PwC Japan有限責任監査法人\n \n東京事務所",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "EQ_04": {
+      "name": "監査意見の質",
+      "score": 1,
+      "value": "Unqualified (clean) opinion",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "PwCジャパンはIFRSに基づく無限定適正意見を表明しており、強調事項・継続企業の疑義・重要な監査上の事項に関する懸念も一切なく、監査意見リスクは最小限である。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "注記事項",
+        "passage": "当監査法人は、上記の連結財務諸表が、「連結財務諸表の用語、様式及び作成方法に関する規則」第312条により規定された国際会計基準に準拠して、KDDI株式会社及び連結子会社の2025年3月31日現在の財政状態並びに同日をもって終了する連結会計年度の経営成績及びキャッシュ・フローの状況を、全ての重要な点に",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "EQ_07": {
+      "name": "費用の資産計上方針",
+      "score": 2,
+      "value": "自社利用ソフトウェア：社内利用可能期間（５～10年）に基づく定額法",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "社内利用ソフトウェアを5〜10年の定額法で資本化する方針は保守的かつ通信業界の標準的な処理と一致しており、利益操作を示唆する方針変更も見受けられない。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "注記事項",
+        "passage": "自社利用のソフトウェアについては、社内における利用可能期間（５～10年）に基づく定額法によっております。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "OPS_02": {
+      "name": "仕入先集中リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_05": {
+      "name": "受注残高と先行きの見通し",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_07": {
+      "name": "知的財産の保有と保護",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_08": {
+      "name": "労務・労働組合リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_01": {
+      "name": "製品・サービス集中リスク",
+      "score": 3,
+      "value": "パーソナル事業、ビジネス事業の2セグメント構成",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "KDDIの2セグメント構造は通信中心の個人事業が主要収益源であり、日本の総合通信キャリアとして業界平均的な事業集中度と判断される。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "３事業の内容",
+        "passage": "当社の企業集団は、当社、連結子会社189社（国内129社、海外60社）、持分法適用関連会社及び共同支配企業47社（国内38社、海外９社）により構成されており、「パーソナル事業」、「ビジネス事業」を主な事業としております。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "OPS_03": {
+      "name": "設備投資負担と資産の老朽度",
+      "score": 4,
+      "value": "Capex/Revenue ≈ 6.8%",
+      "flag": null,
+      "scored_by": "llm",
+      "rationale": "5Gネットワーク展開と既存インフラ維持の並行投資により、ネットワーク移行期における設備投資負担は業界平均を上回り、フリーキャッシュフローへの圧力が高い。",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "kddi.pdf",
+        "inputs": [
+          {
+            "line_item": "capex",
+            "value": 400947,
+            "section": "⑤連結キャッシュ・フロー計算書",
+            "passage": "有形固定資産の取得による支出 △523,940 △400,947"
+          },
+          {
+            "line_item": "revenue",
+            "value": 5917953,
+            "section": "②連結損益計算書",
+            "passage": "売上高 25 5,754,047 5,917,953"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "OPS_04": {
+      "name": "オペレーティング・レバレッジ",
+      "score": 4,
+      "value": "競争激化に伴う料金値下げによる通信料収入の低下、販売コミッションやお客さま維持コストの増大、新周波数対応による基地局建設やデータトラフィック急増に伴うネットワークコストの増加",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "有価証券報告書は料金競争による収益感応度と、ネットワーク構築・顧客維持コスト増加を明示的にリスクとして挙げており、日本の通信市場における高い営業レバレッジリスクを示している。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "３事業の内容",
+        "passage": "競争激化に伴う料金値下げによる通信料収入の低下、販売コミッションやお客さま維持コストの増大",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "OPS_06": {
+      "name": "技術の陳腐化リスク",
+      "score": 3,
+      "value": "通信方式、端末、ネットワーク、ソフトウェア等における特定技術への依存による影響；新たな高速データ無線技術による競争激化",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "端末・ネットワーク・ソフトウェアへの技術依存リスクや新無線技術の脅威に関する明示的な開示は、大手総合通信キャリアとして業界標準的な技術陳腐化リスクを反映している。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "３事業の内容",
+        "passage": "通信方式、端末、ネットワーク、ソフトウェア等における特定技術への依存による影響・新たな高速データ無線技術による競争激化",
+        "passage_verified": false
+      },
+      "status": "scored"
+    },
+    "LEG_01": {
+      "name": "係争中の訴訟",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_02": {
+      "name": "規制当局による調査",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_03": {
+      "name": "環境関連債務",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_04": {
+      "name": "業種固有の規制依存",
+      "score": 3,
+      "value": "電気通信事業者として通信の秘密の保護を遵守、周波数獲得の不確実性",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "周波数割当への依存や通信の秘密に関する義務は日本の通信事業者にとって標準的な規制リスクであり、開示内容には業界平均を超える特異な規制上の問題は示されていない。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "注記事項",
+        "passage": "当社の必要に応じた周波数を獲得できるかどうか",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "LEG_05": {
+      "name": "税務上の偶発事項",
+      "score": 2,
+      "value": "法定実効税率30.6%→31.5%への変更により繰延税金資産2,121百万円増加",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "税率変更により繰延税金資産が21億円増加しており、これは通常の法定税率改正に伴う調整であり、税務上の係争や偶発債務は開示されていないため、税務リスクは業界平均を下回る。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "注記事項",
+        "passage": "この税率変更により、繰延税金資産の金額（繰延税金負債を控除した金額）は2,121百万円増加し、法人税等調整額が同額減少しております。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "LEG_06": {
+      "name": "サイバーセキュリティ・データ保護リスク",
+      "score": 3,
+      "value": "サイバー攻撃による情報流出・サービス不正利用リスクを開示；情報セキュリティ部会設置",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "KDDIのサイバーセキュリティ開示はグローバルなサイバー脅威を認識し標準的なコンプライアンス体制を説明しているが、具体的な情報漏洩事案や定量的なリスク額は示されておらず、大手通信事業者として業界平均水準と判断される。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "注記事項",
+        "passage": "近年、第三者によるサイバー攻撃等によって、重要な機密情報が外部流出する事故やサービス不正利用が世界的に発生しており、大きな社会問題となっています。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MKT_01": {
+      "name": "市場シェアの趨勢",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_02": {
+      "name": "競争の激しさ",
+      "score": 4,
+      "value": "競争激化リスク明示、NTTドコモ・ソフトバンク・MVNO事業者等が競合として示唆",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "KDDIは価格競争、新規MNO/MVNO参入、NTTグループの再編を競争リスクとして明示しており、政府主導の料金引き下げ圧力が続く日本市場において競争激化リスクは業界平均を上回る。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "３事業等のリスク",
+        "passage": "異業種との提携、通信と電力等のその他商品とのセット販売、MNO、MVNO事業者の新規参入、他事業者の事業領域の拡大等の事業環境の変化に伴う競争の激化",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MKT_03": {
+      "name": "参入障壁",
+      "score": 2,
+      "value": "電気通信事業法に基づく登録・電波法に基づく免許が参入障壁として機能",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "電気通信事業法に基づく登録義務および電波法に基づく無線局免許は実質的な参入障壁を形成しており、周波数の希少性も相まって既存事業者にとって新規参入リスクは業界平均を下回る。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "３事業の内容",
+        "passage": "国内において電気通信サービスを提供する会社においては、電気通信事業を行うにあたり電気通信事業法に基づく登録等を受ける必要があります。また、無線局に係る電気通信設備の設置にあたっては、電波法の免許等を受ける必要があります。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MKT_04": {
+      "name": "価格決定力と売上総利益率の趨勢",
+      "score": 3,
+      "value": "gross margin 42.2% → 42.4% (+0.1 pts)",
+      "flag": null,
+      "scored_by": "llm",
+      "rationale": "証拠として粗利益率の前年比データが提供されていないため、セクター平均をアンカーとしてスコアを設定する。日本の通信事業者は政府の料金引き下げ圧力による緩やかな逆風に直面しているが、KDDIはサービス多様化で一部相殺している。",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "kddi.pdf",
+        "inputs": [
+          {
+            "line_item": "revenue",
+            "value": 5917953,
+            "section": "②連結損益計算書",
+            "passage": "売上高 25 5,754,047 5,917,953"
+          },
+          {
+            "line_item": "cogs",
+            "value": 3409577,
+            "section": "②連結損益計算書",
+            "passage": "売上原価 26 3,323,514 3,409,577"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "MKT_05": {
+      "name": "原材料・投入コストのエクスポージャー",
+      "score": 4,
+      "value": "燃料高騰による通信設備コスト増加、電力調達コスト増加、端末価格高騰（米国関税）リスク",
+      "flag": true,
+      "scored_by": "llm",
+      "rationale": "KDDIはネットワーク設備の燃料費、エネルギー事業における調達コスト上昇、米国関税による端末価格上昇という複数のインプットコストリスクを抱えており、純粋な通信事業者と比較してコモディティ露出度は業界平均を上回る。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "３事業等のリスク",
+        "passage": "燃料高騰等による通信設備コストの増加及びエネルギー事業における電力調達コストの増加・日本国内における人件費や建設費、物価の高騰に伴う仕入コスト等の増加・米国による関税率の引き上げに伴う端末価格等の高騰",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "MACRO_02": {
+      "name": "金利感応度",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MACRO_01": {
+      "name": "為替エクスポージャー",
+      "score": 2,
+      "value": "外貨建保証債務: US$5百万、US$1百万、PHP163百万、HK$6百万",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "KDDIの外貨エクスポージャーは軽微であり、開示されているのは少額の外貨建て偶発債務のみで、収益・コストの通貨構成の記載もなく、主に円建ての国内通信事業という性格と整合的である。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "注記事項",
+        "passage": "（内、外貨建保証債務）\n(US$5百万)\n(PHP163百万)\n(HK$6百万)\n(US$1百万)",
+        "passage_verified": false
+      },
+      "status": "scored"
+    },
+    "MACRO_03": {
+      "name": "景気後退期の業績悪化履歴",
+      "score": 2,
+      "value": "売上高: 2021年3月期5,312,599百万円、2022年3月期5,446,708百万円、2023年3月期5,671,762百万円、2024年3月期5,754,047百万円、2025年3月期5,917,953百万円",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "開示されている5年間の収益トレンドは一貫した成長を示しており、通信サービスのサブスクリプション収益は構造的に景気変動の影響を受けにくく、同業他社対比で景気循環リスクは低いと判断される。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "注記事項",
+        "passage": "売上高\n(百万円)\n5,312,599\n5,446,708\n5,671,762\n5,754,047\n5,917,953",
+        "passage_verified": true
+      },
+      "status": "scored"
+    },
+    "JP_01": {
+      "name": "政策保有株式",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_02": {
+      "name": "メインバンク依存",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_03": {
+      "name": "持株会社構造",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_05": {
+      "name": "個人情報保護法（APPI）対応",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "no supporting evidence in selected sections",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_04": {
+      "name": "役員構成・独立性",
+      "score": 2,
+      "value": "取締役11名中社外取締役6名（過半数）、監査役会設置会社、指名諮問委員会・報酬諮問委員会設置",
+      "flag": false,
+      "scored_by": "llm",
+      "rationale": "KDDIの取締役会は社外取締役比率が約55%であり、指名・報酬諮問委員会も独立社外取締役が委員長を務めるなど、日本の通信セクターの中では平均を上回るガバナンス水準にある。ただし、三委員会設置会社ではなく監査役会設置会社の形態を維持している点は、ガバナンス改善の余地として残る。",
+      "citation": {
+        "citation_type": "nlp",
+        "doc": "kddi.pdf",
+        "section": "４コーポレート・ガバナンスの状況等",
+        "passage": "取締役会においては社内取締役と社外取締役が半数ずつ選任されており、過半数の社外監査役を含む監査役会等と連携する体制を採用しています。",
+        "passage_verified": true
+      },
+      "status": "scored"
+    }
+  },
+  "category_scores": {
+    "REV": 2.0,
+    "MGMT": 2.0,
+    "FIN": 1.5,
+    "EQ": 1.75,
+    "OPS": 3.5,
+    "LEG": 2.67,
+    "MKT": 3.25,
+    "MACRO": 2.0
+  },
+  "composite_score": 2.18,
+  "csrp_bps_low": 100,
+  "csrp_bps_high": 150,
+  "recommended_bps": 125,
+  "japan_supplemental": {
+    "JPN": {
+      "score": 2.0,
+      "signals": {
+        "JP_01": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "no supporting evidence in selected sections",
+          "rationale_ja": "no supporting evidence in selected sections",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_02": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "no supporting evidence in selected sections",
+          "rationale_ja": "no supporting evidence in selected sections",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_03": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "no supporting evidence in selected sections",
+          "rationale_ja": "no supporting evidence in selected sections",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_04": {
+          "score": 2,
+          "scored_by": "llm",
+          "rationale_en": "KDDI's board with ~55% outside directors and independent-chaired nomination/compensation advisory committees represents above-average governance for Japanese telecoms, though retention of the traditional audit & supervisory board structure (rather than a three-committee model) moderately limits the score improvement.",
+          "rationale_ja": "KDDIの取締役会は社外取締役比率が約55%であり、指名・報酬諮問委員会も独立社外取締役が委員長を務めるなど、日本の通信セクターの中では平均を上回るガバナンス水準にある。ただし、三委員会設置会社ではなく監査役会設置会社の形態を維持している点は、ガバナンス改善の余地として残る。",
+          "value": "取締役11名中社外取締役6名（過半数）、監査役会設置会社、指名諮問委員会・報酬諮問委員会設置",
+          "flag": false,
+          "citation": {
+            "citation_type": "nlp",
+            "doc": "kddi.pdf",
+            "section": "４コーポレート・ガバナンスの状況等",
+            "passage": "取締役会においては社内取締役と社外取締役が半数ずつ選任されており、過半数の社外監査役を含む監査役会等と連携する体制を採用しています。",
+            "passage_verified": true
+          },
+          "status": "scored"
+        },
+        "JP_05": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "no supporting evidence in selected sections",
+          "rationale_ja": "no supporting evidence in selected sections",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        }
+      }
+    }
+  },
+  "unscored_signals": [
+    {
+      "id": "REV_01",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "REV_03",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "REV_04",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "REV_05",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "REV_06",
+      "reason": "need ≥3 years of revenue history"
+    },
+    {
+      "id": "MGMT_01",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "MGMT_06",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "FIN_01",
+      "reason": "missing debt/cash/EBITDA inputs"
+    },
+    {
+      "id": "FIN_03",
+      "reason": "missing debt maturity inputs"
+    },
+    {
+      "id": "FIN_04",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "FIN_06",
+      "reason": "missing working-capital inputs"
+    },
+    {
+      "id": "FIN_09",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "EQ_02",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "EQ_05",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "EQ_06",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "EQ_08",
+      "reason": "need current+prior receivables and revenue"
+    },
+    {
+      "id": "OPS_02",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "OPS_05",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "OPS_07",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "OPS_08",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "LEG_01",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "LEG_02",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "LEG_03",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "MKT_01",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "MACRO_02",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "JP_01",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "JP_02",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "JP_03",
+      "reason": "no supporting evidence in selected sections"
+    },
+    {
+      "id": "JP_05",
+      "reason": "no supporting evidence in selected sections"
+    }
+  ],
+  "search_calls": []
+}

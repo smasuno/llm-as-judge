@@ -1,0 +1,904 @@
+{
+  "metadata": {
+    "company": "SAAF Co., Ltd.",
+    "filing_date": "2025-03-31",
+    "run_date": "2026-06-06",
+    "model": "claude-sonnet-4-6",
+    "comparables_mode": false
+  },
+  "signals": {
+    "REV_01": {
+      "name": "顧客集中リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_02": {
+      "name": "収益タイプ構成",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_03": {
+      "name": "契約期間・更新リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_04": {
+      "name": "支配権変更条項",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_05": {
+      "name": "地域別売上集中リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_06": {
+      "name": "売上ボラティリティ",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_07": {
+      "name": "最終市場の景気循環性",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_01": {
+      "name": "創業者・キーパーソン依存",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_02": {
+      "name": "経営チームの層の厚さと在任期間",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_03": {
+      "name": "後継者計画",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_04": {
+      "name": "内部関係者の持株集中",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_05": {
+      "name": "関連当事者取引",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_06": {
+      "name": "競業避止・リテンション契約",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_01": {
+      "name": "レバレッジ比率の趨勢",
+      "score": 4,
+      "value": 6.9,
+      "flag": true,
+      "scored_by": "threshold",
+      "rationale": "ネット有利子負債/EBITDA ≈ 6.9倍（>4.0倍）。",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "SAAF.pdf",
+        "inputs": [
+          {
+            "line_item": "short_term_debt",
+            "value": 4530000,
+            "section": "借入金等明細表",
+            "passage": "短期借入金 4,530,000"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "FIN_02": {
+      "name": "インタレスト・カバレッジ",
+      "score": 2,
+      "value": 6.73,
+      "flag": false,
+      "scored_by": "threshold",
+      "rationale": "EBITDA/支払利息 ≈ 6.73倍。",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "SAAF.pdf",
+        "inputs": [
+          {
+            "line_item": "short_term_debt",
+            "value": 4530000,
+            "section": "借入金等明細表",
+            "passage": "短期借入金 4,530,000"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "FIN_03": {
+      "name": "負債の返済期限スケジュール",
+      "score": 4,
+      "value": "57% ≤24m",
+      "flag": true,
+      "scored_by": "threshold",
+      "rationale": "有利子負債の57%が24か月以内。",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "SAAF.pdf",
+        "inputs": [
+          {
+            "line_item": "short_term_debt",
+            "value": 4530000,
+            "section": "借入金等明細表",
+            "passage": "短期借入金 4,530,000"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "FIN_04": {
+      "name": "財務コベナンツの余裕度",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_05": {
+      "name": "流動性ポジション",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_06": {
+      "name": "運転資本の質",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_07": {
+      "name": "オフバランス負債",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_08": {
+      "name": "退職給付債務の積立不足",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_09": {
+      "name": "過去の買収に係る条件付対価",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_01": {
+      "name": "収益認識方針",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_02": {
+      "name": "非会計基準指標との乖離",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_03": {
+      "name": "監査人の質と異動",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_04": {
+      "name": "監査意見の質",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_05": {
+      "name": "過年度修正の履歴",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_06": {
+      "name": "内部統制の不備",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_07": {
+      "name": "費用の資産計上方針",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_08": {
+      "name": "押込み販売の兆候",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_01": {
+      "name": "製品・サービス集中リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_02": {
+      "name": "仕入先集中リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_03": {
+      "name": "設備投資負担と資産の老朽度",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_04": {
+      "name": "オペレーティング・レバレッジ",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_05": {
+      "name": "受注残高と先行きの見通し",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_06": {
+      "name": "技術の陳腐化リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_07": {
+      "name": "知的財産の保有と保護",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_08": {
+      "name": "労務・労働組合リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_01": {
+      "name": "係争中の訴訟",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_02": {
+      "name": "規制当局による調査",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_03": {
+      "name": "環境関連債務",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_04": {
+      "name": "業種固有の規制依存",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_05": {
+      "name": "税務上の偶発事項",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_06": {
+      "name": "サイバーセキュリティ・データ保護リスク",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_01": {
+      "name": "市場シェアの趨勢",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_02": {
+      "name": "競争の激しさ",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_03": {
+      "name": "参入障壁",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_04": {
+      "name": "価格決定力と売上総利益率の趨勢",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_05": {
+      "name": "原材料・投入コストのエクスポージャー",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MACRO_01": {
+      "name": "為替エクスポージャー",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MACRO_02": {
+      "name": "金利感応度",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MACRO_03": {
+      "name": "景気後退期の業績悪化履歴",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_01": {
+      "name": "政策保有株式",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_02": {
+      "name": "メインバンク依存",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_03": {
+      "name": "持株会社構造",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_04": {
+      "name": "役員構成・独立性",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_05": {
+      "name": "個人情報保護法（APPI）対応",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    }
+  },
+  "category_scores": {
+    "REV": null,
+    "MGMT": null,
+    "FIN": 3.33,
+    "EQ": null,
+    "OPS": null,
+    "LEG": null,
+    "MKT": null,
+    "MACRO": null
+  },
+  "composite_score": 3.33,
+  "csrp_bps_low": 200,
+  "csrp_bps_high": 300,
+  "recommended_bps": 250,
+  "japan_supplemental": {
+    "JPN": {
+      "score": null,
+      "signals": {
+        "JP_01": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "not extracted",
+          "rationale_ja": "not extracted",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_02": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "not extracted",
+          "rationale_ja": "not extracted",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_03": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "not extracted",
+          "rationale_ja": "not extracted",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_04": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "not extracted",
+          "rationale_ja": "not extracted",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_05": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "not extracted",
+          "rationale_ja": "not extracted",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        }
+      }
+    }
+  },
+  "unscored_signals": [
+    {
+      "id": "REV_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_07",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_07",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_08",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_09",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_07",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_08",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_07",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_08",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MKT_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MKT_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MKT_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MKT_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MKT_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MACRO_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MACRO_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MACRO_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "JP_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "JP_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "JP_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "JP_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "JP_05",
+      "reason": "not extracted"
+    }
+  ],
+  "search_calls": []
+}

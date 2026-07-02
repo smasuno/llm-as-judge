@@ -1,0 +1,904 @@
+{
+  "metadata": {
+    "company": "SAAF Co., Ltd.",
+    "filing_date": "2025-03-31",
+    "run_date": "2026-06-06",
+    "model": "claude-sonnet-4-6",
+    "comparables_mode": false
+  },
+  "signals": {
+    "REV_01": {
+      "name": "Customer concentration",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_02": {
+      "name": "Revenue type mix",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_03": {
+      "name": "Contract duration and renewal risk",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_04": {
+      "name": "Change-of-control clauses",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_05": {
+      "name": "Geographic revenue concentration",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_06": {
+      "name": "Revenue volatility",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "REV_07": {
+      "name": "End-market cyclicality",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_01": {
+      "name": "Founder / key person concentration",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_02": {
+      "name": "Management team depth and tenure",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_03": {
+      "name": "Succession planning",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_04": {
+      "name": "Insider ownership concentration",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_05": {
+      "name": "Related-party transactions",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MGMT_06": {
+      "name": "Non-compete and retention agreements",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_01": {
+      "name": "Leverage ratio trend",
+      "score": 4,
+      "value": 6.9,
+      "flag": true,
+      "scored_by": "threshold",
+      "rationale": "Net Debt/EBITDA ≈ 6.9x (>4.0x).",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "SAAF.pdf",
+        "inputs": [
+          {
+            "line_item": "short_term_debt",
+            "value": 4530000,
+            "section": "借入金等明細表",
+            "passage": "短期借入金 4,530,000"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "FIN_02": {
+      "name": "Interest coverage",
+      "score": 2,
+      "value": 6.73,
+      "flag": false,
+      "scored_by": "threshold",
+      "rationale": "EBITDA/Interest ≈ 6.73x.",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "SAAF.pdf",
+        "inputs": [
+          {
+            "line_item": "short_term_debt",
+            "value": 4530000,
+            "section": "借入金等明細表",
+            "passage": "短期借入金 4,530,000"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "FIN_03": {
+      "name": "Debt maturity schedule",
+      "score": 4,
+      "value": "57% ≤24m",
+      "flag": true,
+      "scored_by": "threshold",
+      "rationale": "57% of debt due ≤24m.",
+      "citation": {
+        "citation_type": "structured",
+        "doc": "SAAF.pdf",
+        "inputs": [
+          {
+            "line_item": "short_term_debt",
+            "value": 4530000,
+            "section": "借入金等明細表",
+            "passage": "短期借入金 4,530,000"
+          }
+        ]
+      },
+      "status": "scored"
+    },
+    "FIN_04": {
+      "name": "Financial covenant headroom",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_05": {
+      "name": "Liquidity position",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_06": {
+      "name": "Working capital quality",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_07": {
+      "name": "Off-balance-sheet liabilities",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_08": {
+      "name": "Pension and OPEB underfunding",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "FIN_09": {
+      "name": "Contingent consideration from prior acquisitions",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_01": {
+      "name": "Revenue recognition policy",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_02": {
+      "name": "Non-GAAP divergence",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_03": {
+      "name": "Auditor quality and changes",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_04": {
+      "name": "Audit opinion quality",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_05": {
+      "name": "Restatement history",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_06": {
+      "name": "Internal control weaknesses",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_07": {
+      "name": "Expense capitalization policy",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "EQ_08": {
+      "name": "Channel stuffing indicators",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_01": {
+      "name": "Product/service concentration",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_02": {
+      "name": "Supplier concentration",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_03": {
+      "name": "Capital expenditure intensity and asset age",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_04": {
+      "name": "Operating leverage",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_05": {
+      "name": "Backlog and forward visibility",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_06": {
+      "name": "Technology obsolescence risk",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_07": {
+      "name": "IP ownership and protection",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "OPS_08": {
+      "name": "Labor and union risk",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_01": {
+      "name": "Pending litigation",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_02": {
+      "name": "Regulatory investigations",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_03": {
+      "name": "Environmental liabilities",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_04": {
+      "name": "Industry-specific regulatory dependencies",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_05": {
+      "name": "Tax contingencies",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "LEG_06": {
+      "name": "Cybersecurity and data privacy risk",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_01": {
+      "name": "Market share trend",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_02": {
+      "name": "Competitive intensity",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_03": {
+      "name": "Barriers to entry",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_04": {
+      "name": "Pricing power and gross margin trend",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MKT_05": {
+      "name": "Commodity and input cost exposure",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MACRO_01": {
+      "name": "FX exposure",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MACRO_02": {
+      "name": "Interest rate sensitivity",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "MACRO_03": {
+      "name": "Cyclical drawdown history",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_01": {
+      "name": "Strategic (cross-) shareholdings",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_02": {
+      "name": "Main bank dependence",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_03": {
+      "name": "Holding company structure",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_04": {
+      "name": "Board composition and independence",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    },
+    "JP_05": {
+      "name": "APPI / personal data compliance",
+      "score": null,
+      "value": null,
+      "flag": null,
+      "scored_by": "unscored",
+      "rationale": "not extracted",
+      "citation": null,
+      "status": "unscored"
+    }
+  },
+  "category_scores": {
+    "REV": null,
+    "MGMT": null,
+    "FIN": 3.33,
+    "EQ": null,
+    "OPS": null,
+    "LEG": null,
+    "MKT": null,
+    "MACRO": null
+  },
+  "composite_score": 3.33,
+  "csrp_bps_low": 200,
+  "csrp_bps_high": 300,
+  "recommended_bps": 250,
+  "japan_supplemental": {
+    "JPN": {
+      "score": null,
+      "signals": {
+        "JP_01": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "not extracted",
+          "rationale_ja": "not extracted",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_02": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "not extracted",
+          "rationale_ja": "not extracted",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_03": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "not extracted",
+          "rationale_ja": "not extracted",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_04": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "not extracted",
+          "rationale_ja": "not extracted",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        },
+        "JP_05": {
+          "score": null,
+          "scored_by": "unscored",
+          "rationale_en": "not extracted",
+          "rationale_ja": "not extracted",
+          "value": null,
+          "flag": null,
+          "citation": null,
+          "status": "unscored"
+        }
+      }
+    }
+  },
+  "unscored_signals": [
+    {
+      "id": "REV_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "REV_07",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MGMT_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_07",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_08",
+      "reason": "not extracted"
+    },
+    {
+      "id": "FIN_09",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_07",
+      "reason": "not extracted"
+    },
+    {
+      "id": "EQ_08",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_07",
+      "reason": "not extracted"
+    },
+    {
+      "id": "OPS_08",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "LEG_06",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MKT_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MKT_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MKT_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MKT_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MKT_05",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MACRO_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MACRO_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "MACRO_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "JP_01",
+      "reason": "not extracted"
+    },
+    {
+      "id": "JP_02",
+      "reason": "not extracted"
+    },
+    {
+      "id": "JP_03",
+      "reason": "not extracted"
+    },
+    {
+      "id": "JP_04",
+      "reason": "not extracted"
+    },
+    {
+      "id": "JP_05",
+      "reason": "not extracted"
+    }
+  ],
+  "search_calls": []
+}

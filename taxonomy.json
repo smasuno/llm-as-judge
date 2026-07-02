@@ -1,0 +1,156 @@
+{
+  "csrp_framework": {
+    "description_en": "Company-Specific Risk Premium (CSRP) signal taxonomy for M&A valuation. Each category contains signals to be extracted and scored 1-5 relative to industry peers (1=minimal risk, 3=peer-average, 5=significant risk). The weighted average composite score maps to a discount rate premium (bps) added to WACC.",
+    "description_ja": "M&Aバリュエーションのための会社固有リスクプレミアム（CSRP）シグナル分類。各カテゴリーには抽出対象のシグナルが含まれ、業界同業他社との相対で1〜5にスコアリングされる（1=リスク最小、3=同業平均、5=重大リスク）。加重平均した総合スコアを、WACCに加算する割引率プレミアム（bps）にマッピングする。",
+    "scoring_scale": {
+      "1": {"en": "Minimal risk — better than peer average", "ja": "リスク最小 — 同業平均より良好"},
+      "2": {"en": "Below-average risk — slightly below peer norms", "ja": "平均以下のリスク — 同業水準をやや下回る"},
+      "3": {"en": "Average risk — in line with industry peers", "ja": "平均的リスク — 業界同業他社と同水準"},
+      "4": {"en": "Above-average risk — exceeds peer norms, warrants attention", "ja": "平均以上のリスク — 同業水準を上回り、留意を要する"},
+      "5": {"en": "Significant risk — material, value-impairing, clearly differentiates negatively from peers", "ja": "重大リスク — 重要かつ価値毀損的で、同業他社と比べ明確に劣後する"}
+    },
+    "score_to_premium_bps": {
+      "1.0-1.5": "0-50",
+      "1.5-2.0": "50-100",
+      "2.0-2.5": "100-150",
+      "2.5-3.0": "150-200",
+      "3.0-3.5": "200-300",
+      "3.5-4.0": "300-400",
+      "4.0-5.0": "400-500"
+    },
+    "categories": [
+      {
+        "id": "REV",
+        "name_en": "Revenue and Customer Risk",
+        "name_ja": "売上・顧客リスク",
+        "default_weight": 0.20,
+        "signals": [
+          {"id": "REV_01", "name_en": "Customer concentration", "name_ja": "顧客集中リスク", "extraction_target_en": "Percentage of revenue from top 1, 3, and 5 customers. Flag if any single customer exceeds 10% or 25% of revenue.", "extraction_target_ja": "上位1社・3社・5社の顧客が占める売上高比率。単一顧客が売上高の10%または25%を超える場合はフラグを立てる。", "source_sections_en": ["risk_factors", "revenue_footnotes", "segment_disclosures"], "source_sections_ja": ["事業等のリスク", "収益認識関係注記", "セグメント情報"]},
+          {"id": "REV_02", "name_en": "Revenue type mix", "name_ja": "収益タイプ構成", "extraction_target_en": "Proportion of recurring/contracted vs. transactional/spot revenue. Subscription, SaaS, long-term contracts are lower risk.", "extraction_target_ja": "継続的・契約ベース収益とスポット・取引ベース収益の構成比率。サブスクリプション、SaaS、長期契約は低リスク。", "source_sections_en": ["business_description", "revenue_recognition_policy"], "source_sections_ja": ["事業の内容", "収益認識に関する会計方針"]},
+          {"id": "REV_03", "name_en": "Contract duration and renewal risk", "name_ja": "契約期間・更新リスク", "extraction_target_en": "Weighted average remaining contract term with top customers. Presence of auto-renew vs. manual renewal clauses.", "extraction_target_ja": "主要顧客との加重平均残存契約期間。自動更新条項と個別更新条項の有無。", "source_sections_en": ["risk_factors", "material_contracts"], "source_sections_ja": ["事業等のリスク", "重要な契約等"]},
+          {"id": "REV_04", "name_en": "Change-of-control clauses", "name_ja": "支配権変更条項", "extraction_target_en": "Whether key customer or supplier contracts contain change-of-control termination rights or consent requirements.", "extraction_target_ja": "主要な顧客・仕入先契約に支配権変更（チェンジ・オブ・コントロール）による解約権または承諾要件が含まれているか。", "source_sections_en": ["risk_factors", "material_contracts", "exhibit_10"], "source_sections_ja": ["事業等のリスク", "重要な契約等"]},
+          {"id": "REV_05", "name_en": "Geographic revenue concentration", "name_ja": "地域別売上集中リスク", "extraction_target_en": "Revenue by country or region. Flag if >50% from single country (excluding home market).", "extraction_target_ja": "国・地域別売上高。単一国（本国を除く）から50%超の場合はフラグを立てる。", "source_sections_en": ["segment_disclosures", "geographic_revenue_footnote"], "source_sections_ja": ["セグメント情報", "所在地別・地域別売上高注記"]},
+          {"id": "REV_06", "name_en": "Revenue volatility", "name_ja": "売上ボラティリティ", "extraction_target_en": "Year-over-year revenue growth rate for trailing 5 years. Compute standard deviation.", "extraction_target_ja": "直近5年間の前年比売上成長率。その標準偏差を算出する。", "source_sections_en": ["income_statement_5yr"], "source_sections_ja": ["主要な経営指標等の推移", "連結損益計算書"]},
+          {"id": "REV_07", "name_en": "End-market cyclicality", "name_ja": "最終市場の景気循環性", "extraction_target_en": "Primary end-market sectors of the customer base and their cyclical sensitivity.", "extraction_target_ja": "顧客基盤の主要な最終需要産業と、その景気循環に対する感応度。", "source_sections_en": ["business_description", "risk_factors"], "source_sections_ja": ["事業の内容", "事業等のリスク"]}
+        ]
+      },
+      {
+        "id": "MGMT",
+        "name_en": "Management and Key Person Risk",
+        "name_ja": "経営・キーパーソンリスク",
+        "default_weight": 0.15,
+        "signals": [
+          {"id": "MGMT_01", "name_en": "Founder / key person concentration", "name_ja": "創業者・キーパーソン依存", "extraction_target_en": "Whether a single founder or executive is named repeatedly in connection with strategy, relationships, or IP. Founder ownership percentage.", "extraction_target_ja": "単一の創業者・経営者が戦略・取引関係・知的財産に関連して繰り返し言及されているか。創業者の持株比率。", "source_sections_en": ["proxy", "risk_factors", "business_description"], "source_sections_ja": ["役員の状況", "事業等のリスク", "事業の内容"]},
+          {"id": "MGMT_02", "name_en": "Management team depth and tenure", "name_ja": "経営チームの層の厚さと在任期間", "extraction_target_en": "Number of named executives, average tenure at company, recent C-suite departures in past 24 months.", "extraction_target_ja": "記載のある役員数、平均在任期間、直近24か月間の経営幹部の退任。", "source_sections_en": ["proxy", "10K_item_10"], "source_sections_ja": ["役員の状況", "コーポレート・ガバナンスの状況"]},
+          {"id": "MGMT_03", "name_en": "Succession planning", "name_ja": "後継者計画", "extraction_target_en": "Explicit mention of succession planning or leadership development programs.", "extraction_target_ja": "後継者計画またはリーダー育成プログラムの明示的な記載。", "source_sections_en": ["proxy_governance_section", "risk_factors"], "source_sections_ja": ["コーポレート・ガバナンスの状況", "事業等のリスク"]},
+          {"id": "MGMT_04", "name_en": "Insider ownership concentration", "name_ja": "内部関係者の持株集中", "extraction_target_en": "Beneficial ownership table — % held by top 5 insiders and any >10% beneficial owner.", "extraction_target_ja": "大株主の状況 — 上位5名の内部関係者の持株比率および10%超の実質株主の有無。", "source_sections_en": ["proxy_ownership_table"], "source_sections_ja": ["大株主の状況", "株式等の状況"]},
+          {"id": "MGMT_05", "name_en": "Related-party transactions", "name_ja": "関連当事者取引", "extraction_target_en": "Nature, volume, and arm's-length status of transactions between company and insiders or affiliates.", "extraction_target_ja": "会社と内部関係者・関係会社との取引の内容、規模、および独立企業間取引性。", "source_sections_en": ["related_party_footnote", "proxy"], "source_sections_ja": ["関連当事者情報注記", "役員の状況"]},
+          {"id": "MGMT_06", "name_en": "Non-compete and retention agreements", "name_ja": "競業避止・リテンション契約", "extraction_target_en": "Whether key executives have non-competes, golden handcuffs, or change-of-control retention bonuses.", "extraction_target_ja": "主要経営者に競業避止義務、長期インセンティブ、支配権変更時のリテンション・ボーナスが付与されているか。", "source_sections_en": ["proxy_compensation", "exhibit_10"], "source_sections_ja": ["役員の報酬等", "重要な契約等"]}
+        ]
+      },
+      {
+        "id": "FIN",
+        "name_en": "Financial Health and Capital Structure Risk",
+        "name_ja": "財務健全性・資本構成リスク",
+        "default_weight": 0.20,
+        "signals": [
+          {"id": "FIN_01", "name_en": "Leverage ratio trend", "name_ja": "レバレッジ比率の趨勢", "extraction_target_en": "Net Debt / EBITDA for trailing 3-5 years. Direction of trend.", "extraction_target_ja": "直近3〜5年間のネット有利子負債/EBITDA。趨勢の方向性。", "source_sections_en": ["balance_sheet", "debt_footnote", "income_statement"], "source_sections_ja": ["連結貸借対照表", "借入金等明細表", "連結損益計算書"]},
+          {"id": "FIN_02", "name_en": "Interest coverage", "name_ja": "インタレスト・カバレッジ", "extraction_target_en": "EBITDA / Interest Expense. Flag if below 3.0x.", "extraction_target_ja": "EBITDA/支払利息。3.0倍を下回る場合はフラグを立てる。", "source_sections_en": ["income_statement", "debt_footnote"], "source_sections_ja": ["連結損益計算書", "借入金等明細表"]},
+          {"id": "FIN_03", "name_en": "Debt maturity schedule", "name_ja": "負債の返済期限スケジュール", "extraction_target_en": "Scheduled debt maturities by year (typically a table in debt footnote). Flag any maturity wall within 24 months.", "extraction_target_ja": "年度別の負債返済予定（通常は借入金明細表に記載）。24か月以内の返済集中（マチュリティ・ウォール）があればフラグを立てる。", "source_sections_en": ["debt_footnote", "long_term_debt_schedule"], "source_sections_ja": ["借入金等明細表", "社債明細表"]},
+          {"id": "FIN_04", "name_en": "Financial covenant headroom", "name_ja": "財務コベナンツの余裕度", "extraction_target_en": "Maintenance covenants (leverage, coverage ratios) and current headroom. Cross-default provisions.", "extraction_target_ja": "維持すべき財務制限条項（レバレッジ・カバレッジ比率）と現状の余裕度。クロス・デフォルト条項。", "source_sections_en": ["debt_footnote", "credit_agreement_exhibit"], "source_sections_ja": ["借入金等明細表", "重要な契約等"]},
+          {"id": "FIN_05", "name_en": "Liquidity position", "name_ja": "流動性ポジション", "extraction_target_en": "Cash and cash equivalents plus undrawn revolver capacity vs. near-term obligations.", "extraction_target_ja": "現金及び現金同等物に未実行のコミットメントライン枠を加えた額と、短期債務との比較。", "source_sections_en": ["balance_sheet", "liquidity_section_mda"], "source_sections_ja": ["連結貸借対照表", "経営者による財政状態等の分析（流動性）"]},
+          {"id": "FIN_06", "name_en": "Working capital quality", "name_ja": "運転資本の質", "extraction_target_en": "Days Sales Outstanding (DSO), Days Inventory Outstanding (DIO), Days Payable Outstanding (DPO) — trailing 3yr trend vs. peers.", "extraction_target_ja": "売上債権回転日数（DSO）、棚卸資産回転日数（DIO）、仕入債務回転日数（DPO）— 直近3年の趨勢と同業他社との比較。", "source_sections_en": ["balance_sheet", "income_statement"], "source_sections_ja": ["連結貸借対照表", "連結損益計算書"]},
+          {"id": "FIN_07", "name_en": "Off-balance-sheet liabilities", "name_ja": "オフバランス負債", "extraction_target_en": "Operating lease commitments, factoring/receivables sold, synthetic leases, guarantees, letters of credit.", "extraction_target_ja": "オペレーティング・リース債務、債権流動化（ファクタリング）、合成リース、債務保証、信用状（L/C）。", "source_sections_en": ["commitments_contingencies_footnote", "lease_footnote"], "source_sections_ja": ["偶発債務注記", "リース取引関係注記"]},
+          {"id": "FIN_08", "name_en": "Pension and OPEB underfunding", "name_ja": "退職給付債務の積立不足", "extraction_target_en": "Defined benefit plan funded status (PBO minus plan assets). Sensitivity to discount rate changes.", "extraction_target_ja": "確定給付制度の積立状況（退職給付債務から年金資産を控除した額）。割引率変動に対する感応度。", "source_sections_en": ["pension_footnote"], "source_sections_ja": ["退職給付関係注記"]},
+          {"id": "FIN_09", "name_en": "Contingent consideration from prior acquisitions", "name_ja": "過去の買収に係る条件付対価", "extraction_target_en": "Earn-out obligations from prior deals. Maximum exposure and payment trigger conditions.", "extraction_target_ja": "過去の買収案件に係るアーンアウト債務。最大エクスポージャーと支払発動条件。", "source_sections_en": ["business_combinations_footnote", "fair_value_footnote"], "source_sections_ja": ["企業結合等関係注記", "金融商品の時価等関係注記"]}
+        ]
+      },
+      {
+        "id": "EQ",
+        "name_en": "Earnings Quality and Accounting Risk",
+        "name_ja": "利益の質・会計リスク",
+        "default_weight": 0.15,
+        "signals": [
+          {"id": "EQ_01", "name_en": "Revenue recognition policy", "name_ja": "収益認識方針", "extraction_target_en": "Point-in-time vs. over-time recognition. Whether policy is aggressive relative to peers (e.g., recognizing revenue before delivery, bill-and-hold).", "extraction_target_ja": "一時点での認識か一定期間にわたる認識か。同業他社と比べ積極的な方針か（例：引渡前の収益認識、未出荷売上計上）。", "source_sections_en": ["revenue_recognition_policy_footnote"], "source_sections_ja": ["収益認識に関する会計方針", "収益認識関係注記"]},
+          {"id": "EQ_02", "name_en": "Non-GAAP divergence", "name_ja": "非会計基準指標との乖離", "extraction_target_en": "Size of reconciling items between GAAP net income and management's adjusted EBITDA. Nature of add-backs (recurring vs. truly one-time).", "extraction_target_ja": "会計基準上の純利益と経営者の調整後EBITDAとの調整項目の大きさ。加算項目の性質（経常的か真に一時的か）。", "source_sections_en": ["mda_non_gaap_reconciliation", "earnings_releases"], "source_sections_ja": ["経営者による経営成績の分析", "決算短信"]},
+          {"id": "EQ_03", "name_en": "Auditor quality and changes", "name_ja": "監査人の質と異動", "extraction_target_en": "Auditor name and any auditor change in past 5 years. Reason for change if disclosed.", "extraction_target_ja": "監査法人名および直近5年間の監査人異動の有無。開示されている場合は異動理由。", "source_sections_en": ["auditor_report", "8K_auditor_change"], "source_sections_ja": ["独立監査人の監査報告書", "監査公認会計士等の異動"]},
+          {"id": "EQ_04", "name_en": "Audit opinion quality", "name_ja": "監査意見の質", "extraction_target_en": "Any qualified opinion, emphasis of matter paragraphs, or going concern language.", "extraction_target_ja": "限定付適正意見、強調事項区分、または継続企業の前提（ゴーイング・コンサーン）に関する記載の有無。", "source_sections_en": ["auditor_report"], "source_sections_ja": ["独立監査人の監査報告書"]},
+          {"id": "EQ_05", "name_en": "Restatement history", "name_ja": "過年度修正の履歴", "extraction_target_en": "Any financial statement restatements in past 5 years, nature, and magnitude.", "extraction_target_ja": "直近5年間の過年度財務諸表の訂正の有無、その内容と規模。", "source_sections_en": ["8K_restatement", "annual_report_comparative_periods"], "source_sections_ja": ["訂正報告書", "比較情報の注記"]},
+          {"id": "EQ_06", "name_en": "Internal control weaknesses", "name_ja": "内部統制の不備", "extraction_target_en": "Material weaknesses or significant deficiencies in ICFR under SOX 302/404.", "extraction_target_ja": "財務報告に係る内部統制（J-SOX）における開示すべき重要な不備。", "source_sections_en": ["icfr_assessment_section", "auditor_internal_control_report"], "source_sections_ja": ["内部統制報告書", "内部統制監査報告書"]},
+          {"id": "EQ_07", "name_en": "Expense capitalization policy", "name_ja": "費用の資産計上方針", "extraction_target_en": "R&D capitalization, software development cost capitalization (ASC 350). Whether policy has changed.", "extraction_target_ja": "研究開発費・ソフトウェア開発費の資産計上。方針の変更の有無。", "source_sections_en": ["significant_accounting_policies_footnote"], "source_sections_ja": ["重要な会計方針"]},
+          {"id": "EQ_08", "name_en": "Channel stuffing indicators", "name_ja": "押込み販売の兆候", "extraction_target_en": "Whether DSO has grown faster than revenue over trailing 3 years (possible premature revenue recognition).", "extraction_target_ja": "直近3年間で売上債権回転日数（DSO）が売上高を上回って増加しているか（早期の収益認識の可能性）。", "source_sections_en": ["balance_sheet", "income_statement"], "source_sections_ja": ["連結貸借対照表", "連結損益計算書"]}
+        ]
+      },
+      {
+        "id": "OPS",
+        "name_en": "Operational and Business Model Risk",
+        "name_ja": "事業運営・ビジネスモデルリスク",
+        "default_weight": 0.15,
+        "signals": [
+          {"id": "OPS_01", "name_en": "Product/service concentration", "name_ja": "製品・サービス集中リスク", "extraction_target_en": "Revenue from single product line or service as % of total. Historical mix shift trend.", "extraction_target_ja": "単一の製品ライン・サービスが総売上に占める比率。構成比のシフトの推移。", "source_sections_en": ["segment_disclosures", "business_description"], "source_sections_ja": ["セグメント情報", "事業の内容"]},
+          {"id": "OPS_02", "name_en": "Supplier concentration", "name_ja": "仕入先集中リスク", "extraction_target_en": "% of COGS from top 3 suppliers. Any sole-source dependencies named.", "extraction_target_ja": "上位3社の仕入先が売上原価に占める比率。単一調達先への依存の明示。", "source_sections_en": ["risk_factors", "business_description"], "source_sections_ja": ["事業等のリスク", "事業の内容"]},
+          {"id": "OPS_03", "name_en": "Capital expenditure intensity and asset age", "name_ja": "設備投資負担と資産の老朽度", "extraction_target_en": "Capex/Revenue ratio. Accumulated depreciation as % of gross PP&E (proxy for asset age). Maintenance vs. growth capex split.", "extraction_target_ja": "設備投資/売上高比率。有形固定資産の取得原価に対する減価償却累計額比率（資産老朽度の代理指標）。維持投資と成長投資の内訳。", "source_sections_en": ["cash_flow_statement", "ppe_footnote"], "source_sections_ja": ["連結キャッシュ・フロー計算書", "設備の状況"]},
+          {"id": "OPS_04", "name_en": "Operating leverage", "name_ja": "オペレーティング・レバレッジ", "extraction_target_en": "Fixed vs. variable cost structure. Gross margin and EBITDA margin sensitivity to revenue changes.", "extraction_target_ja": "固定費・変動費の構造。売上変動に対する売上総利益率およびEBITDAマージンの感応度。", "source_sections_en": ["income_statement", "mda_cost_structure"], "source_sections_ja": ["連結損益計算書", "経営者による経営成績の分析（費用構造）"]},
+          {"id": "OPS_05", "name_en": "Backlog and forward visibility", "name_ja": "受注残高と先行きの見通し", "extraction_target_en": "Order backlog level and trend. Book-to-bill ratio if disclosed.", "extraction_target_ja": "受注残高の水準と趨勢。開示されている場合はブック・トゥ・ビル比率。", "source_sections_en": ["mda_backlog_section", "business_description"], "source_sections_ja": ["経営者による経営成績の分析（受注状況）", "事業の内容"]},
+          {"id": "OPS_06", "name_en": "Technology obsolescence risk", "name_ja": "技術の陳腐化リスク", "extraction_target_en": "Explicit risk factor language around platform transitions, disruptive competition, or product end-of-life.", "extraction_target_ja": "プラットフォーム移行、破壊的競争、製品のライフサイクル終了に関するリスク記載。", "source_sections_en": ["risk_factors"], "source_sections_ja": ["事業等のリスク"]},
+          {"id": "OPS_07", "name_en": "IP ownership and protection", "name_ja": "知的財産の保有と保護", "extraction_target_en": "Patent count, expiration dates, pending IP litigation, trade secret dependencies.", "extraction_target_ja": "保有特許件数、満了時期、係争中の知財訴訟、営業秘密への依存。", "source_sections_en": ["risk_factors", "legal_proceedings", "business_description"], "source_sections_ja": ["事業等のリスク", "重要な訴訟事件等", "事業の内容"]},
+          {"id": "OPS_08", "name_en": "Labor and union risk", "name_ja": "労務・労働組合リスク", "extraction_target_en": "Unionization rate, CBA expiration dates, recent labor disputes or strikes.", "extraction_target_ja": "労働組合の組織率、労働協約の満了時期、直近の労働争議やストライキ。", "source_sections_en": ["risk_factors", "business_description"], "source_sections_ja": ["事業等のリスク", "従業員の状況"]}
+        ]
+      },
+      {
+        "id": "LEG",
+        "name_en": "Legal, Regulatory, and Compliance Risk",
+        "name_ja": "法務・規制・コンプライアンスリスク",
+        "default_weight": 0.05,
+        "signals": [
+          {"id": "LEG_01", "name_en": "Pending litigation", "name_ja": "係争中の訴訟", "extraction_target_en": "Nature, plaintiff, claimed damages, and stage of all material pending lawsuits. Accrued reserves vs. claimed amounts.", "extraction_target_ja": "重要な係争中訴訟の内容、原告、請求損害額、進行段階。引当計上額と請求額の比較。", "source_sections_en": ["legal_proceedings_section", "contingencies_footnote"], "source_sections_ja": ["重要な訴訟事件等", "偶発債務注記"]},
+          {"id": "LEG_02", "name_en": "Regulatory investigations", "name_ja": "規制当局による調査", "extraction_target_en": "Any disclosed SEC, DOJ, FTC, CFPB, or foreign regulatory investigations or consent orders.", "extraction_target_ja": "金融庁・証券取引等監視委員会・公正取引委員会等の規制当局による調査や行政処分の開示の有無。", "source_sections_en": ["legal_proceedings_section", "risk_factors"], "source_sections_ja": ["重要な訴訟事件等", "事業等のリスク"]},
+          {"id": "LEG_03", "name_en": "Environmental liabilities", "name_ja": "環境関連債務", "extraction_target_en": "Superfund or remediation obligations. Accrued liability vs. estimated range of loss.", "extraction_target_ja": "土壌汚染・浄化義務等の環境関連債務。引当計上額と見積損失額の幅との比較。", "source_sections_en": ["environmental_footnote", "contingencies_footnote"], "source_sections_ja": ["環境関連注記", "偶発債務注記"]},
+          {"id": "LEG_04", "name_en": "Industry-specific regulatory dependencies", "name_ja": "業種固有の規制依存", "extraction_target_en": "FDA approvals, banking licenses, FCC licenses, ITAR/EAR export controls, FSA registration (Japan).", "extraction_target_ja": "医薬品承認、銀行業免許、電気通信事業許可、輸出管理（外為法・安全保障貿易管理）、金融庁登録等。", "source_sections_en": ["risk_factors", "business_description"], "source_sections_ja": ["事業等のリスク", "事業の内容"]},
+          {"id": "LEG_05", "name_en": "Tax contingencies", "name_ja": "税務上の偶発事項", "extraction_target_en": "Uncertain tax positions (ASC 740-10 / FIN 48). Transfer pricing disputes. Total unrecognized tax benefits.", "extraction_target_ja": "不確実な税務ポジション。移転価格課税に関する争訟。未認識の税務ベネフィット総額。", "source_sections_en": ["income_tax_footnote"], "source_sections_ja": ["税効果会計関係注記", "法人税等関係注記"]},
+          {"id": "LEG_06", "name_en": "Cybersecurity and data privacy risk", "name_ja": "サイバーセキュリティ・データ保護リスク", "extraction_target_en": "Disclosed breaches, pending privacy litigation, GDPR/APPI (Japan) exposure, SEC cybersecurity disclosures.", "extraction_target_ja": "開示された情報漏洩、係争中のプライバシー訴訟、GDPR・個人情報保護法（APPI）上のエクスポージャー、サイバーセキュリティ開示。", "source_sections_en": ["risk_factors", "cybersecurity_disclosure_item_1c"], "source_sections_ja": ["事業等のリスク", "サイバーセキュリティに関する開示"]}
+        ]
+      },
+      {
+        "id": "MKT",
+        "name_en": "Market Position and Competitive Risk",
+        "name_ja": "市場地位・競争リスク",
+        "default_weight": 0.05,
+        "signals": [
+          {"id": "MKT_01", "name_en": "Market share trend", "name_ja": "市場シェアの趨勢", "extraction_target_en": "Explicit or implied market share data. Revenue growth vs. management's stated market growth rate.", "extraction_target_ja": "明示的または推定される市場シェアのデータ。売上成長率と経営者が示す市場成長率との比較。", "source_sections_en": ["mda", "business_description"], "source_sections_ja": ["経営者による経営成績の分析", "事業の内容"]},
+          {"id": "MKT_02", "name_en": "Competitive intensity", "name_ja": "競争の激しさ", "extraction_target_en": "Number and nature of competitors named. Language intensity: 'highly competitive' vs. 'limited competition'.", "extraction_target_ja": "言及される競合他社の数と性質。記載のトーン（「競争が激しい」対「競争は限定的」）。", "source_sections_en": ["competition_section", "risk_factors"], "source_sections_ja": ["事業の内容（競合状況）", "事業等のリスク"]},
+          {"id": "MKT_03", "name_en": "Barriers to entry", "name_ja": "参入障壁", "extraction_target_en": "Patents, network effects, regulatory moats, switching costs explicitly described.", "extraction_target_ja": "特許、ネットワーク効果、規制による参入障壁、スイッチングコストの明示的記載。", "source_sections_en": ["business_description", "risk_factors"], "source_sections_ja": ["事業の内容", "事業等のリスク"]},
+          {"id": "MKT_04", "name_en": "Pricing power and gross margin trend", "name_ja": "価格決定力と売上総利益率の趨勢", "extraction_target_en": "Gross margin trend over 5 years. Ability to pass through cost increases described in MD&A.", "extraction_target_ja": "5年間の売上総利益率の趨勢。MD&Aに記載されたコスト上昇の価格転嫁能力。", "source_sections_en": ["income_statement", "mda"], "source_sections_ja": ["連結損益計算書", "経営者による経営成績の分析"]},
+          {"id": "MKT_05", "name_en": "Commodity and input cost exposure", "name_ja": "原材料・投入コストのエクスポージャー", "extraction_target_en": "Raw material cost as % of COGS. Hedging program disclosures. Named commodity dependencies.", "extraction_target_ja": "売上原価に占める原材料費比率。ヘッジ取引の開示。特定の市況商品への依存。", "source_sections_en": ["risk_factors", "quantitative_qualitative_disclosures_market_risk"], "source_sections_ja": ["事業等のリスク", "市場リスクに関する定量的・定性的開示"]}
+        ]
+      },
+      {
+        "id": "MACRO",
+        "name_en": "Macro and External Sensitivity",
+        "name_ja": "マクロ・外部環境感応度",
+        "default_weight": 0.05,
+        "signals": [
+          {"id": "MACRO_01", "name_en": "FX exposure", "name_ja": "為替エクスポージャー", "extraction_target_en": "Revenue and cost currency mix. Hedging instruments and notional amounts. Translation vs. transaction exposure.", "extraction_target_ja": "売上・コストの通貨構成。ヘッジ手段と想定元本。換算リスクと取引リスク。", "source_sections_en": ["market_risk_section", "derivatives_footnote"], "source_sections_ja": ["市場リスクに関する開示", "デリバティブ取引関係注記"]},
+          {"id": "MACRO_02", "name_en": "Interest rate sensitivity", "name_ja": "金利感応度", "extraction_target_en": "Floating rate debt as % of total debt. Pension discount rate sensitivity table.", "extraction_target_ja": "総有利子負債に占める変動金利負債の比率。退職給付債務の割引率感応度表。", "source_sections_en": ["debt_footnote", "pension_footnote", "market_risk_section"], "source_sections_ja": ["借入金等明細表", "退職給付関係注記", "市場リスクに関する開示"]},
+          {"id": "MACRO_03", "name_en": "Cyclical drawdown history", "name_ja": "景気後退期の業績悪化履歴", "extraction_target_en": "Revenue and EBITDA performance in 2009 (GFC), 2020 (COVID), and other sector-specific downturns.", "extraction_target_ja": "2009年（世界金融危機）、2020年（コロナ禍）、その他業種固有の景気後退局面における売上・EBITDAの推移。", "source_sections_en": ["income_statement_historical", "mda_historical"], "source_sections_ja": ["主要な経営指標等の推移", "経営者による経営成績の分析（過年度）"]}
+        ]
+      },
+      {
+        "id": "JPN",
+        "name_en": "Japan-Specific Supplemental Signals",
+        "name_ja": "日本固有の補足シグナル",
+        "default_weight": 0.0,
+        "supplemental": true,
+        "note_en": "Scored 1-5 like other signals but EXCLUDED from the weighted composite (weight 0). Reported separately as Japan-specific context for the valuation.",
+        "note_ja": "他のシグナルと同様に1〜5でスコアリングするが、加重総合スコアには算入しない（ウェイト0）。バリュエーションにおける日本固有の文脈として別途報告する。",
+        "signals": [
+          {"id": "JP_01", "name_en": "Strategic (cross-) shareholdings", "name_ja": "政策保有株式", "extraction_target_en": "Number and book/market value of strategic shareholdings (policy-held shares), as % of net assets. Stated rationale for holding and any reduction policy. Large cross-holdings tie up capital and weaken governance.", "extraction_target_ja": "政策保有株式の銘柄数および貸借対照表計上額・時価、純資産に対する比率。保有の合理性に関する説明と縮減方針。多額の政策保有は資本を固定化しガバナンスを弱める。", "source_sections_en": ["corporate_governance_section", "specified_investment_securities_disclosure"], "source_sections_ja": ["コーポレート・ガバナンスの状況", "株式の保有状況（政策保有株式）"]},
+          {"id": "JP_02", "name_en": "Main bank dependence", "name_ja": "メインバンク依存", "extraction_target_en": "Identity of the main bank(s) and degree of dependence — share of borrowings, board members or shareholdings from lenders, reliance on relationship financing vs. capital markets.", "extraction_target_ja": "メインバンクの特定とその依存度 — 借入金に占める比率、貸し手からの役員受入や株式保有、資本市場ではなくリレーション融資への依存。", "source_sections_en": ["debt_footnote", "major_shareholders", "corporate_governance_section"], "source_sections_ja": ["借入金等明細表", "大株主の状況", "コーポレート・ガバナンスの状況"]},
+          {"id": "JP_03", "name_en": "Holding company structure", "name_ja": "持株会社構造", "extraction_target_en": "Whether the entity is a pure/operating holding company. Number of operating subsidiaries, minority interests, and structural subordination of the parent's cash flows.", "extraction_target_ja": "純粋持株会社か事業持株会社か。傘下事業子会社の数、非支配株主持分、親会社キャッシュフローの構造的劣後の有無。", "source_sections_en": ["business_description", "group_structure_diagram", "segment_disclosures"], "source_sections_ja": ["事業の内容", "関係会社の状況", "セグメント情報"]},
+          {"id": "JP_04", "name_en": "Board composition and independence", "name_ja": "役員構成・独立性", "extraction_target_en": "Number and ratio of independent outside directors, board size, presence of a nomination/compensation committee, governance structure type (company with audit & supervisory board vs. committees).", "extraction_target_ja": "独立社外取締役の人数・比率、取締役会の規模、指名・報酬委員会の有無、機関設計（監査役会設置会社か委員会型か）。", "source_sections_en": ["corporate_governance_section", "directors_section"], "source_sections_ja": ["コーポレート・ガバナンスの状況", "役員の状況"]},
+          {"id": "JP_05", "name_en": "APPI / personal data compliance", "name_ja": "個人情報保護法（APPI）対応", "extraction_target_en": "Compliance posture under Japan's Act on the Protection of Personal Information (APPI) — disclosed breaches, PPC guidance or orders, cross-border data transfer exposure, volume of personal data held.", "extraction_target_ja": "個人情報保護法（APPI）への対応状況 — 開示された漏洩事案、個人情報保護委員会の指導・命令、越境データ移転のエクスポージャー、保有個人データの規模。", "source_sections_en": ["risk_factors", "cybersecurity_disclosure"], "source_sections_ja": ["事業等のリスク", "サイバーセキュリティに関する開示"]}
+        ]
+      }
+    ]
+  }
+}
