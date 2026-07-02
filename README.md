@@ -26,9 +26,9 @@ inconsistency — all of which make it a strong candidate for AI-assisted automa
 ## 📊 Result
 The final output from the AI agent pipeline is an Excel spreadsheet (see screenshot below). The spreadsheet contains:
 
-1. The final CSRP value proposed by the AI agent
-2. Scores for each of the components, and corresponding weights selected by the user
-3. A detailed section for how each of the component scores were determined, along with rationale and citations pulled from the source material
+1. The final CSRP value proposed by the AI agent (Cell F4)
+2. Scores for each of the components, and corresponding weights selected by the user (Cells C9:D16)
+3. A detailed section for how each of the component scores were determined, along with rationale and citations pulled from the source material (row 27 onwards)
 
 ![output](img/screenshot.png)
 
